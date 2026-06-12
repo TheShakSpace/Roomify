@@ -1,4 +1,11 @@
-export const PUTER_WORKER_URL = import.meta.env.VITE_PUTER_WORKER_URL || "";
+export const PUTER_WORKER_URL_RAW = import.meta.env.VITE_PUTER_WORKER_URL || "";
+
+// Normalize so URL concatenation is consistent.
+// Examples:
+// - https://abc.com/worker -> https://abc.com/worker
+// - https://abc.com/worker/ -> https://abc.com/worker
+export const PUTER_WORKER_URL = PUTER_WORKER_URL_RAW.replace(/\/+$/g, '');
+
 
 // Storage Paths
 export const STORAGE_PATHS = {
