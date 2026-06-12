@@ -28,9 +28,11 @@ const Navbar = () => {
             <nav className="inner">
                 <div className="left">
                     <div className="brand">
-                        <Box className="logo" />
+                        <Box  className="logo" />
 
-                        <span className="name">Roomify</span>
+                        <span className="name">
+                            Roomify
+                        </span>
                     </div>
 
                     <ul className="links">
@@ -64,8 +66,7 @@ const Navbar = () => {
                 </div>
             </nav>
         </header>
-    );
-};
+    )
+}
 
-export default Navbar;
-
+export default Navbar
